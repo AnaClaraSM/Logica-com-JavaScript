@@ -1,19 +1,20 @@
 alert("Boas-vindas ao jogo do Número Secreto!"); //Exibe mensagem de alerta 
-// Pode usar "", '' ou  ``, mas é boa prática manter a consistência no uso.
-// ";" é opcional
 
-let numeroSecreto = 5; //Declaração e inicialização ("valoração") de variável
+let numeroSecreto = 4; //Variável para armaenar o número secreto
+console.log("Número Secreto: "+ numeroSecreto); //Mostra o número secreto no console
 
-let chute = prompt("Digite um número de 1 a 10."); //Entrada de dados pelo usuário e armazenamento em variável
+let chute = prompt("Digite um número de 1 a 10."); //Recebe valor digitado pelo usuário
+console.log(`Chute: ${chute}`);
 
-// Laço condicional Se
-if (chute == numeroSecreto) /*Comparação*/ {
-    // Comandos caso condição verdadeira
-    // console.log("Isso aí! Você descobriu o número secreto (5)!"); //Imprime dado no console
-    alert("Isso aí! Você descobriu o número secreto (5)!");
+console.log("Comparação dos valores: " + (chute == numeroSecreto));
+
+// Se o chute for igual ao número secreto
+if (chute == numeroSecreto) {
+    // Alerta de acerto
+    alert(`Isso aí! Você descobriu o número secreto (${numeroSecreto})!`);
 } 
 // Senão
 else {
-    // Comandos caso condição falsa
-    alert("Você errou.")
+    // Alerta de erro
+    alert(`Você errou. O número secreto era ${numeroSecreto}, mas você respondeu ${chute}. :(`);
 }
