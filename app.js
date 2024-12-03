@@ -1,7 +1,9 @@
 // Boas vindas
 alert("Boas-vindas ao jogo do Número Secreto!");
 
-let numeroSecreto = parseInt((Math.random() * 100) + 1); //Gera um número aleatório entre 1 e 100
+let numeroMaximo = 100;
+
+let numeroSecreto = parseInt((Math.random() * numeroMaximo) + 1); //Gera um número aleatório entre 1 e 100
 console.log("Número Secreto: " + numeroSecreto);
 let chute; //Armazena o número informado pelo usuário - inicia vazio
 let tentativas = 1; //Armazena as tentativas de acerto - inicia em 1
@@ -10,7 +12,7 @@ let tentativas = 1; //Armazena as tentativas de acerto - inicia em 1
 // Enquanto o chute for diferente do n.s.
 while (chute != numeroSecreto) {
     // Solicita a entrada do usuário
-    chute = prompt("Digite um número de 1 a 100.");
+    chute = prompt(`Digite um número de 1 a ${numeroMaximo}.`);
 
     console.log(`Chute: ${chute}`);
     console.log("Comparação dos valores: " + (chute == numeroSecreto));
